@@ -22,7 +22,7 @@ def handle_error(error: str, conn: pymysql.Connection) -> Tuple[dict, int]:
 
 
 @app.route('/health_check', methods=['GET'])
-def heath_check():
+def health_check():
     return {'message': 'ok'}, 200
 
 
