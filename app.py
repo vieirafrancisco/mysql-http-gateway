@@ -21,6 +21,11 @@ def handle_error(error: str, conn: pymysql.Connection) -> Tuple[dict, int]:
     return {'error': error}, 500
 
 
+@app.route('/health_check', methods=['GET'])
+def heath_check():
+    return {'message': 'ok'}, 200
+
+
 @app.route('/load_mysql_data', methods=['POST'])
 def load_mysql_data():
     if 'file' not in request.files:
