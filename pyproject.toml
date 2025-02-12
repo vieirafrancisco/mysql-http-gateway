@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "mysql-http-gateway"
+version = "0.1.0"
+description = ""
+authors = ["Francisco <vieirafrancisco.dev@gmail.com>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{include = "mysql_http_gateway"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+flask = "^3.1.0"
+gunicorn = "^23.0.0"
+pymysql = "^1.1.1"
+environ = "^1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.9.6"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
