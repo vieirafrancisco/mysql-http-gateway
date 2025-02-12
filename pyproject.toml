@@ -12,7 +12,8 @@ python = "^3.12"
 flask = "^3.1.0"
 gunicorn = "^23.0.0"
 pymysql = "^1.1.1"
-environ = "^1.0"
+environs = "^14.1.1"
+cryptography = "^44.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
