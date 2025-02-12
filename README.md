@@ -3,7 +3,7 @@ Serviço HTTP para acesso e gerenciamento de dados em um banco de dados MySQL pr
 
 ## Exemplo de uso:
 ```bash
-curl -X POST -F "file=@/caminho/do/arquivo.txt" http://localhost:5000/load_mysql_data
+curl -X POST -F "file=@/caminho/do/arquivo.sql" http://localhost:5000/execute_sql_file
 ```
 
 ## Em casos de erro:

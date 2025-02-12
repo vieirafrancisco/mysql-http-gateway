@@ -26,8 +26,8 @@ def health_check():
     return {'message': 'ok'}, 200
 
 
-@app.route('/load_mysql_data', methods=['POST'])
-def load_mysql_data():
+@app.route('/execute_sql_file', methods=['POST'])
+def execute_sql_file():
     if 'file' not in request.files:
         return 'Nenhum arquivo enviado', 400
 
@@ -62,7 +62,7 @@ def load_mysql_data():
     conn.commit()
     conn.close()
 
-    return jsonify({'message': 'Dados carregados com sucesso'}), 200
+    return jsonify({'message': 'SQL executado com sucesso'}), 200
 
 
 if __name__ == '__main__':
