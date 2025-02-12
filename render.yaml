@@ -19,3 +19,7 @@ services:
         value: root
       - key: DB_NAME
         value: meu_banco
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: POETRY_VERSION
+        value: 1.5.1
