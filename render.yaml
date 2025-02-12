@@ -1,0 +1,21 @@
+services:
+  - type: web
+    runtime: python
+    name: mysql-http-gateway
+    repo: https://github.com/vieirafrancisco/mysql-http-gateway
+    numInstances: 1   # Manual scaling configuration. Default: 1 for new services
+    region: oregon # Default: oregon
+    plan: free    # Default: starter
+    branch: main      # Default: master
+    buildCommand: poetry install
+    startCommand: poetry run gunicorn app:app
+    autoDeploy: false # Disable automatic deploys
+    envVars: # Environment variables
+      - key: DB_HOST
+        value: localhost
+      - key: DB_USER
+        value: root
+      - key: DB_PASSWORD
+        value: root
+      - key: DB_NAME
+        value: meu_banco
