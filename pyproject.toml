@@ -5,7 +5,7 @@ description = ""
 authors = ["Francisco <vieirafrancisco.dev@gmail.com>"]
 license = "MIT License"
 readme = "README.md"
-packages = [{include = "mysql_http_gateway"}]
+# packages = [{include = "mysql_http_gateway"}]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -14,7 +14,6 @@ gunicorn = "^23.0.0"
 pymysql = "^1.1.1"
 environs = "^14.1.1"
 cryptography = "^44.0.1"
-
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.9.6"
