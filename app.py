@@ -10,6 +10,7 @@ env = Env()
 DB_HOST = env.str('DB_HOST')
 DB_USER = env.str('DB_USER')
 DB_PASSWORD = env.str('DB_PASSWORD')
+DB_PORT = env.int('DB_PORT')
 DB_NAME = env.str('DB_NAME')
 
 app = Flask(__name__)
@@ -44,7 +45,11 @@ def execute_sql_file():
     sql_script = file.read().decode('utf-8')
 
     conn = pymysql.connect(
-        host=DB_HOST, user=DB_USER, password=DB_PASSWORD, db=DB_NAME
+        host=DB_HOST,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        db=DB_NAME,
+        port=DB_PORT,
     )
     with conn.cursor() as cursor:
         conn.begin()
